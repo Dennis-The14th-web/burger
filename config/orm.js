@@ -5,7 +5,7 @@ var connection = require("../config/connection");
 // 	Here we pass in query parameters for all 3 methods, including callbacks, to receive the data from the model
 var orm = {
 	selectAll: function(tableInput, cb) {
-		var queryString = "SELECT * from ??";
+		var queryString = "SELECT * FROM ??";
 		connection.query(queryString, [tableInput], function(err, res) {
 			if (err) {
 				throw err;
