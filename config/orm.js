@@ -1,5 +1,5 @@
 // Dependencies
-var connection = require("./connection.js");
+var connection = require("../config/connection");
 
 // Object Relational Mapper
 // 	Here we pass in query parameters for all 3 methods, including callbacks, to receive the data from the model

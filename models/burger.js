@@ -1,5 +1,5 @@
 // Dependencies
-var orm = require("../config/orm.js");
+var orm = require("../config/orm");
 
 // We pass in query parameters as required by our ORM and also a callback to receive data
 var burger = {
