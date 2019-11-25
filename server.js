@@ -7,7 +7,7 @@ var path = require("path");
 
 // Express setup
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 1414;
 
 // Middleware
 app.use(methodOverride("_method"));
