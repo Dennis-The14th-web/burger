@@ -10,6 +10,8 @@ var app = express();
 var PORT = process.env.PORT || 1414;
 
 // Middleware
+app.use(express.static(__dirname + "/public"));
+app.use("/", router);
 app.use(methodOverride("_method"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,8 +23,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Static files and routes (middleware)
-app.use(express.static(__dirname + "/public"));
-app.use("/", router);
+
 
 // Start server
 app.listen(PORT, function() {
