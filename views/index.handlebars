@@ -1,12 +1,15 @@
  <div class="row">
-            <div class="col-sm-12 col-md-4">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><h2 class="text-center">Place Order</h2></div>
                     <div class="panel-body">
                         <form class="create-update-form" action="burgers/create" method="POST">
                           <div class="form-group">
-                            <label for="ca">Burger Name:</label>
-                            <input type="text" id="ca" name="name">
+                            {{!-- <label for="ca">Burger Name:</label>
+                            <input type="text" id="ca" name="name"> --}}
+                            <input id="burger-name" type="text" name="burger_name" placeholder="Order">
+			                <button id="submit-btn" type="submit">Place Order</button>
                           </div>
 
                           <div class="form-group">
@@ -15,12 +18,17 @@
                             <input type="radio" name="devoured" value="1"> Order Picked Up<br>
                           </div>
 
-                          <button type="submit" class="btn-primary">Place Order</button>
+                          {{!-- <button type="submit" class="btn-primary">Place Order</button> --}}
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4">
+            <div class="col-md-3"></div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><h2 class="text-center">Pick Up Order</h2></div>
                     <div class="panel-body">
@@ -42,9 +50,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4">
+            <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h2 class="text-center">Order Picked Up</h2></div>
+                    <div class="panel-heading"><h2 class="text-center">Devoured</h2></div>
                     <div class="panel-body">
                         <ol>
                           {{#each burgers}}
