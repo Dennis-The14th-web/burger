@@ -23,7 +23,7 @@ h1 {
 	padding: 0.5em 1em 0.5em 1em;
 	font-size: 1.5em;
     border-radius: 10px;
-    margin-left: 80px;
+    margin-left: 110px;
 }
 </style> 
  
@@ -69,10 +69,10 @@ h1 {
                               <li>
                                 {{this.burger_name}}
 
-                                 <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                                 {{!-- <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
                                   <input type="hidden" name="devoured" value="true">
                                   <button type="submit">Devour it</button>
-                                </form> 
+                                </form>  --}}
                                 {{> burgers/pickup-order}}
                               </li>
                             {{/unless}}
@@ -91,9 +91,9 @@ h1 {
                               <li>
                                 {{this.burger_name}}
 
-                                 <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                                 {{!-- <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
                                   <input type="hidden" name="devoured" value="false">
-                                </form> 
+                                </form>  --}}
                                 {{> burgers/order-pickedup}}
                               </li>
                             {{/if}}

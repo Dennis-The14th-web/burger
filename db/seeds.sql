@@ -1,5 +1,3 @@
-INSERT INTO burgers (burger_name) VALUES ('Quater Pounder Cheeseburger');
-
-INSERT INTO burgers (burger_name) VALUES ('Big Mac Cheeseburger');
-
-INSERT INTO burgers (burger_name) VALUES ('Junior Cheeseburger');
+INSERT INTO burgers (burger_name) VALUES ('Hamburger');
+INSERT INTO burgers (burger_name) VALUES ('Cheeseburger');
+INSERT INTO burgers (burger_name) VALUES ('Double Meat');
