@@ -1,5 +1,5 @@
-INSERT INTO burgers (burger_name) VALUES ('Quater Pounder Cheeseburger');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Quater Pounder Cheeseburger', FALSE);
 
-INSERT INTO burgers (burger_name) VALUES ('Big Mac Cheeseburger');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Big Mac Cheeseburger', FALSE);
 
-INSERT INTO burgers (burger_name) VALUES ('Junior Cheeseburger');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Junior Cheeseburger', FALSE);
