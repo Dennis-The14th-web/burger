@@ -1,0 +1,12 @@
+#submit-btn {
+	padding: 0.57em 1em 0.57em 1em;
+	font-size: 1.5em;
+	background: rgb(230, 137, 16);
+	border: none;
+	margin-left: -5px;
+}
+
+#burger-name {
+	padding: 0.5em 1em 0.5em 1em;
+	font-size: 1.5em;
+}
