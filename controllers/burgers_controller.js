@@ -3,34 +3,44 @@ var router = express.Router();
 var burger = require("../models/burger");
 
 //GET request for database contents
-router.get("/", function(req, res) {
-	burger.selectAll(function(data) {
-		var hbsObject = {
-			burgers: data
-		};
+router.get('/', function (request, result) {
+	result.redirect('/burgers');
+});
 
-		res.render("index", hbsObject);
+// Route to pull all order
+router.get('/burgers', function (request, result) {
+	burger.all(function (data) {
+		var hbsObject = { burgers: data };
+		console.log(hbsObject);
+		result.render('index', hbsObject);
 	});
 });
 
-//POST request adds a burger to the database
-router.post("/", function(req, res) {
-	console.log(req.body.burger_name);
-	if(req.body.burger_name !== "") {
-		burger.insertOne(req.body.burger_name.trim(), function() {
-			res.redirect("/");
-		});
-	}
+// Route to add an order to the burger database
+router.post('/burgers/create', function (request, result) {
+	burger.create(['burger_name', 'devoured'], [request.body.name, request.body.devoured], function () {
+		result.redirect('/burgers');
+	});
 });
 
-//PUT request to update a burger's status
-router.put("/:id", function(req, res) {
-	console.log(req.params.id);
+// Route to update burger databse when order picked up
+router.put('/burgers/update/:id', function (request, result) {
+	var condition = 'id = ' + request.params.id;
 
-	burger.updateOne(req.params.id, function() {
-		res.redirect("/");
+	console.log('condition', condition);
+
+	burger.update({ devoured: request.body.devoured }, condition, function () {
+		result.redirect('/burgers');
 	});
-})
+});
 
+//Route to delete an order - Future use
+router.delete('/burgers/delete/:id', function (request, result) {
+	var condition = 'id = ' + request.params.id;
+
+	burger.delete(condition, function () {
+		result.redirect('/burgers');
+	});
+});
 
 module.exports = router;

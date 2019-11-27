@@ -2,22 +2,32 @@ var orm = require("../config/orm");
 
 // We pass in query parameters as required by our ORM and also a callback to receive data
 var burger = {
-	selectAll: function(cb) {
-		orm.selectAll("burgers", function(res) {
-			cb(res);
+	// orm to show all values in the burger database.
+	all: function (callback) {
+		orm.all('burgers', function (result) {
+			callback(result);
 		});
 	},
-	insertOne: function(burgerName, cb) {
-		orm.insertOne("burgers", "burger_name", burgerName, function(res) {
-			cb(res);
+	// orm to add values to the burger database
+	// cols and vals are arrays
+	create: function (cols, vals, callback) {
+		orm.create('burgers', cols, vals, function (result) {
+			callback(result);
 		});
 	},
-	updateOne: function(burgerId, cb) {
-		orm.updateOne("burgers", "devoured", 1, "id", burgerId, function(res) {
-			cb(res);
+	// orm to update values in the burger database
+	// objColVals would be the columns and values that you want to update	
+	update: function (objColVals, condition, callback) {
+		orm.update('burgers', objColVals, condition, function (result) {
+			callback(result);
+		});
+	},
+	// orm to delete from the burger database - future use.
+	delete: function (condition, callback) {
+		orm.delete('burgers', condition, function (result) {
+			callback(result);
 		});
 	}
 };
-
 
 module.exports = burger;
