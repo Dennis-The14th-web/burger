@@ -6,7 +6,7 @@ I created a burger logger with MySQL, Node, Express, Handlebars and a homemade O
 
 - Live Heroku Link
 
-    <a href="https://the14thweb-burger.herokuapp.com/"><img src="images/eatdaburgerking02.png" ></a>
+    <a href="https://the14thweb-burger.herokuapp.com/"><img src="images/burgerkingyum02.png" ></a>
 
 - Database illustration image
 
