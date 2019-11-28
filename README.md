@@ -4,11 +4,11 @@
 
 I created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). I used Node and MySQL to query and route data in my app, and Handlebars to generate HTML for web browser layouts.
 
-- Live Heroku Link
+- Live Heroku Image Link Below :point_down:
 
     <a href="https://the14thweb-burger.herokuapp.com/"><img src="images/burgerkingyum02.png" ></a>
 
-- Database illustration image
+- Database illustration image below :point_down:
 
     <img src="images/sqlheroku02.png" >
 
